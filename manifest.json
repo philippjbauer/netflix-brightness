@@ -1,0 +1,17 @@
+{
+  "name": "Netflix Video Brightness",
+  "description": "Adjust the video brightness on the fly.",
+  "version": "1.0",
+  "permissions": ["storage", "activeTab"],
+  "browser_action": {
+    "default_title": "Set the video brightness.",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.netflix.com/watch/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "manifest_version": 2
+}
